@@ -1,7 +1,9 @@
 
 resource "aws_s3_bucket" "main" {
   acl    = "public-read-write"
-
+  tags = {
+      Name = var.project
+    }
   cors_rule {
     allowed_headers = ["*"]
     allowed_methods = ["GET", "PUT", "POST"]

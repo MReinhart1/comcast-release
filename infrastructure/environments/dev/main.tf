@@ -15,4 +15,5 @@ provider "aws" {
 
 module "s3" {
     source = "../../modules/s3"
+    project = var.project
 }
