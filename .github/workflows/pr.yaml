@@ -1,0 +1,14 @@
+
+
+
+
+
+steps:
+
+checkout code
+
+install node
+
+npm install
+npm run test
+

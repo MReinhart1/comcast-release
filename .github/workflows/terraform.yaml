@@ -1,0 +1,11 @@
+
+
+on: 
+changes to infrastructure 
+
+
+tf init with remote state
+
+tf plan
+
+tf apply 

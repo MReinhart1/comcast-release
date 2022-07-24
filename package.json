@@ -1,0 +1,19 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "working with api's to use search functions and leaning how to use both HTML with embedded JS in an ejs file ",
+  "main": "firstRequest.js",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "jest": "^28.1.3",
+    "request": "^2.87.0",
+    "save": "^2.3.2"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest"
+  },
+  "author": "Michael Reinhart",
+  "license": "ISC"
+}
