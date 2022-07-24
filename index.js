@@ -19,5 +19,5 @@ app.get("/results", function(req, res){
 });
 
 app.listen(3000, function(){
-    console.log("Running");
+    console.log("Running on port 3000");
 })
