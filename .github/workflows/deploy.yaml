@@ -11,7 +11,7 @@ jobs:
     name: Deploy the new release
     runs-on: ubuntu-latest
     steps:
-    - name: Install dependencies
+    - name: Release
       run: |
         echo "Run commands for deployment, 
         so something like swapping out instances in aws or helm upgrade commands, 
