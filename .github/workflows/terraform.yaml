@@ -1,13 +1,11 @@
-name: Test
+name: Terraform
 
 on:
   push:
     branches: [ master ]
     paths:
     - 'infrastructure/**'
-
-workflow_dispatch:
-
+  workflow_dispatch:
 
 jobs:
   environments:
@@ -22,11 +20,14 @@ jobs:
         run: |
           cd infrastructure/environments/${{ matrix.environment }}
           echo "I am running the tf init step"
+          ls
       - name: Terraform Plan
         run: |
           cd infrastructure/environments/${{ matrix.environment }}
           echo "I am running the tf plan step with my remote state in aws"
+          ls
       - name: Terraform Apply
         run: |
           cd infrastructure/environments/${{ matrix.environment }}
           echo "I am applying these changes prod being a protected branch that requires approval from code owners"
+          ls
