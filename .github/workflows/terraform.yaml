@@ -8,8 +8,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  runs-on: ubuntu-latest
-  environments:
+  Terraform:
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         environment: ["dev", "stage", "prod"]
