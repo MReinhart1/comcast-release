@@ -1,18 +1,18 @@
-name: Publish in GitHub Package Registry
+name: Deploy
 
 on:  
   push:
     tags:
       - '*'
 
-jobs:  
-  deploy:
-  name: Deploy merlin-service
-  runs-on: ubuntu-latest
+
+jobs:
+  Deploy:
+    name: Deploy the new release
+    runs-on: ubuntu-latest
     steps:
-    - name: Commands for deployment
+    - name: Install dependencies
       run: |
         echo "Run commands for deployment, 
         so something like swapping out instances in aws or helm upgrade commands, 
         maybe argocd commands depending on the deployment type"
-  
