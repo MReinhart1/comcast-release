@@ -1,11 +1,32 @@
+name: Test
+
+on:
+  push:
+    branches: [ master ]
+    paths:
+    - 'infrastructure/**'
+
+workflow_dispatch:
 
 
-on: 
-changes to infrastructure 
-
-
-tf init with remote state
-
-tf plan
-
-tf apply 
+jobs:
+  environments:
+    strategy:
+      matrix:
+        environment: ["dev", "stage", "prod"]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Get Tf
+        run: echo "installing hashicorp/setup-terraform@v1 here"
+      - name: Terraform Init
+        run: |
+          cd infrastructure/environments/${{ matrix.environment }}
+          echo "I am running the tf init step"
+      - name: Terraform Plan
+        run: |
+          cd infrastructure/environments/${{ matrix.environment }}
+          echo "I am running the tf plan step with my remote state in aws"
+      - name: Terraform Apply
+        run: |
+          cd infrastructure/environments/${{ matrix.environment }}
+          echo "I am applying these changes prod being a protected branch that requires approval from code owners"

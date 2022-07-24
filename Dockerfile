@@ -1,6 +1,6 @@
 FROM node:16 AS base
 WORKDIR /usr/src/app
-LABEL project=michaelsapp
+LABEL project=merlin-service
 COPY package*.json ./
 
 RUN npm install

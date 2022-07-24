@@ -1,8 +1,6 @@
 build:
-	docker build . -t movie-search
+	docker build . -t merlin-service
 
 run_image:
-	docker run -p 3000:3000 -d movie-search
+	docker run -p 3000:3000 -d merlin-service
 
-stop_image:
-	docker kill movie-search

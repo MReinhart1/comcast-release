@@ -1,5 +1,5 @@
 {
-  "name": "api",
+  "name": "merlin-service",
   "version": "1.0.0",
   "description": "working with api's to use search functions and leaning how to use both HTML with embedded JS in an ejs file ",
   "main": "firstRequest.js",
