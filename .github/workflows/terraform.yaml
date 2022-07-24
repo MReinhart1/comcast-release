@@ -8,6 +8,7 @@ on:
   workflow_dispatch:
 
 jobs:
+  runs-on: ubuntu-latest
   environments:
     strategy:
       matrix:
